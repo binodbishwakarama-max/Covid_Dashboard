@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>covid-dashboard</title>
+    <!-- Emergency Fallback: Tailwind CDN to bypass local build issues -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 900: '#0B0F19', 800: '#111827', 700: '#1F2937', 400: '#9CA3AF', 100: '#F3F4F6' },
+              status: { active: '#F59E0B', critical: '#DC2626', recovered: '#10B981', vaccine: '#3B82F6' }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #0B0F19; color: white; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
