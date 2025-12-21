@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import compression from 'compression';
 import { config } from './config/env';
 import apiRoutes from './routes/api';
 import { errorHandler } from './middleware/errorHandler';
@@ -8,8 +9,9 @@ import { AppError } from './utils/AppError';
 
 const app = express();
 
-// Security Middleware
+// Security & Performance
 app.use(helmet());
+app.use(compression());
 app.use(cors({
     origin: config.corsOrigin
 }));

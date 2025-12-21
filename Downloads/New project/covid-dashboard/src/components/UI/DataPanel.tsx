@@ -22,17 +22,21 @@ const DataPanel: React.FC<DataPanelProps> = ({ selectedLocation, secondLocation,
     const isGlobal = !selectedLocation;
 
     useEffect(() => {
+        let isMounted = true;
         if (activeData) {
             setLoading(true);
-            // If global, fetch 'all' history? api.ts fetchHistoricalData takes a country string. 
-            // disease.sh supports 'all' for historical? Yes /v3/covid-19/historical/all
             const queryName = isGlobal ? 'all' : activeData.name;
 
             covidApi.getHistory(queryName, historyDays).then(data => {
-                setHistory(data);
-                setLoading(false);
+                if (isMounted) {
+                    setHistory(data);
+                    setLoading(false);
+                }
+            }).catch(() => {
+                if (isMounted) setLoading(false);
             });
         }
+        return () => { isMounted = false; };
     }, [activeData, isGlobal, historyDays]);
 
     // Helper: Generate Insight Sentence

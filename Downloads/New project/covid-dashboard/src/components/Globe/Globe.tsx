@@ -56,6 +56,10 @@ const Globe: React.FC<GlobeProps> = (props) => {
                 const scene = globe.scene();
                 const camera = globe.camera();
 
+                // Performance: Clamp Pixel Ratio
+                const dpr = Math.min(window.devicePixelRatio, 2);
+                renderer.setPixelRatio(dpr);
+
                 // Stop default loop
                 renderer.setAnimationLoop(null);
 
@@ -79,11 +83,15 @@ const Globe: React.FC<GlobeProps> = (props) => {
                         controls.update();
                         renderer.render(scene, camera);
 
-                        // Check zoom logic
+                        // Check zoom logic (Throttled)
                         const altitude = globe.pointOfView().altitude;
                         if (altitude !== undefined) {
-                            if (altitude < 0.5 && viewMode !== 'city') onViewModeChange?.('city');
-                            else if (altitude > 0.8 && viewMode !== 'country') onViewModeChange?.('country');
+                            // Hysteresis to prevent flickering at boundary
+                            if (viewMode === 'country' && altitude < 0.4) {
+                                onViewModeChange?.('city');
+                            } else if (viewMode === 'city' && altitude > 0.9) {
+                                onViewModeChange?.('country');
+                            }
                         }
                     }
                 };
