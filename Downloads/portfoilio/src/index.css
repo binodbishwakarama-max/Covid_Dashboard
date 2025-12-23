@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased transition-colors duration-300;
+  }
+
+  /* Light Mode Background: Soft pastel mesh gradient */
+  body:not(.dark) {
+    background-color: #f8fafc;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(215, 98%, 61%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(256, 96%, 67%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(192, 95%, 50%, 0.2) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  /* Dark Mode Background: Deep space mesh gradient */
+  .dark body {
+    background-color: #020617;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/30 dark:bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/40 dark:bg-white/5 backdrop-blur-md border border-white/20 dark:border-white/10 hover:bg-white/50 dark:hover:bg-white/10 transition-all duration-300;
+  }
+}

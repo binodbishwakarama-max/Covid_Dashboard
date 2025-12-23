@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binod | Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Binod, a Computer Science Student and Full-Stack Developer building accessible and performant web applications.">
+    <meta name="keywords"
+        content="Binod, Full-Stack Developer, Computer Science, Portfolio, React, Three.js, Web Development">
+    <meta name="author" content="Binod">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://binod-portfolio.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://binod-portfolio.com/">
+    <meta property="og:title" content="Binod | Full-Stack Developer">
+    <meta property="og:description"
+        content="Portfolio of Binod, a Computer Science Student and Full-Stack Developer building accessible and performant web applications.">
+    <meta property="og:image" content="https://binod-portfolio.com/og-image.jpg">
+    <meta property="og:site_name" content="Binod Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://binod-portfolio.com/">
+    <meta property="twitter:title" content="Binod | Full-Stack Developer">
+    <meta property="twitter:description"
+        content="Portfolio of Binod, a Computer Science Student and Full-Stack Developer building accessible and performant web applications.">
+    <meta property="twitter:image" content="https://binod-portfolio.com/og-image.jpg">
+    <meta property="twitter:creator" content="@binod">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Inter font for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">Binod<span class="accent">.</span></a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            <!-- Sun Icon -->
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <!-- Moon Icon -->
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <h1 class="hero-title fade-in">Hi, I'm <span class="highlight">Binod</span></h1>
+                <h2 class="hero-subtitle fade-in delay-1">Computer Science Student & <br> Full-Stack Developer</h2>
+                <p class="hero-description fade-in delay-2">
+                    I build accessible, pixel-perfect, and performant web applications. Passionate about solving complex
+                    engineering problems with modern technologies.
+                </p>
+                <div class="hero-cta fade-in delay-3">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            <strong>I turn complex problems into elegant solutions.</strong>
+                        </p>
+                        <p>
+                            As a Computer Science student and Full-Stack Developer, I combine technical expertise with a
+                            product-first mindset. I don't just write code; I build software that scales and delivers
+                            real user value.
+                        </p>
+                        <p>
+                            My experience ranges from developing interactive 3D visualizations to designing efficient
+                            backend architectures. I am actively looking for opportunities where I can contribute to
+                            high-impact projects and continue growing as an engineer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="project-overline">Interactive Visualization</span>
+                            <h3 class="project-title">3D COVID-19 Dashboard</h3>
+                            <p class="project-description">
+                                Architected and built a high-performance 3D visualization tool tracking real-time
+                                pandemic data.
+                                Optimized rendering for 200+ countries using Three.js and implemented responsive
+                                city-level data drilling.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>React</li>
+                                <li>Three.js</li>
+                                <li>API Integration</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/binodbishwakarama-max/Covid_Dashboard" target="_blank"
+                                    rel="noopener noreferrer" class="link-item">
+                                    GitHub <span class="arrow">→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="project-overline">Productivity</span>
+                            <h3 class="project-title">Smart Study Planner</h3>
+                            <p class="project-description">
+                                Developing an intelligent productivity application aiding students in organizing study
+                                schedules.
+                                Focuses on intuitive UX and algorithmic planning to improve academic time management.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Web App</li>
+                                <li>Planning</li>
+                            </ul>
+                            <div class="project-links">
+                                <span class="coming-soon">Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <!-- Backend & Others -->
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Backend & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container contact-container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-text">
+                    I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                    I'll try my best to get back to you!
+                </p>
+                <a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="social-links">
+                <a href="https://github.com/binodbishwakarama-max" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">GitHub</a>
+                <!-- Add more social links here -->
+            </div>
+            <p class="copyright">&copy; 2025 Binod. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

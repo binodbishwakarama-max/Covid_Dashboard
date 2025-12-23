@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://binod-portfolio.com/sitemap.xml
